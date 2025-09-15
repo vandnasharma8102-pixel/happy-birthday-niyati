@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Niyati! 🥳</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main-content">
+        <div class="balloon b1"></div>
+        <div class="balloon b2"></div>
+        <div class="balloon b3"></div>
+
+        <header>
+            <nav>
+                <a href="#welcome" class="nav-link">Home</a>
+                <a href="#quotes" class="nav-link">Quotes</a>
+                <a href="#memes" class="nav-link">Memes</a>
+                <a href="#vouchers" class="nav-link">Vouchers</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="welcome" class="card">
+                <h1>Happy Birthday, Niyati! 🎉</h1>
+                <p>Congrats on surviving another trip around the sun! We've put together this little corner of the internet to celebrate you. Hope your day is as amazing as you are! <i>Although we know you are not 💀
+</i></p>
+            </section>
+
+            <section id="thoughts-prompt" class="card text-center">
+                <h2>A Quick Word From Us...</h2>
+                <p>We've collected some thoughts about you. Click here for the unvarnished truth.</p>
+                <button id="show-thoughts-btn" class="button">Our Honest Thoughts About You</button>
+            </section>
+
+            <section id="quotes" class="card">
+                <h2>A Little Birthday Wisdom... or Not!</h2>
+                <p class="quote-text">"Age is just a number. In your case, a really, really high one. 😉"</p>
+            </section>
+
+            <section id="memes" class="card">
+                <h2>Memes Assembled in Your Honor</h2>
+                <p class="subtitle">Click to reveal the meme!</p>
+                <div class="meme-gallery">
+                    <div class="meme-card">
+                        <div class="meme-front">When someones tells you - 'tension nhi lene ka'</div>
+                        <div class="meme-back"><div class="meme-placeholder"><img src="images/meme-1.jpg" alt="Funny Meme" class="meme-image">
+</div></div>
+                    </div>
+                    <div class="meme-card">
+                        <div class="meme-front">Trying to find seriousness and act mature in my life.</div>
+                        <div class="meme-back"><div class="meme-placeholder"><img src="images/meme-2.jpg" alt="Funny Meme" class="meme-image">
+</div></div>
+                    </div>
+                    <div class="meme-card">
+                        <div class="meme-front">Cake toh mil gya, now waiting for the gift...</div>
+                        <div class="meme-back"><div class="meme-placeholder"><img src="images/meme-3.jpg" alt="Funny Meme" class="meme-image">
+</div></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="vouchers" class="card">
+                <h2>Your Official Birthday Vouchers!</h2>
+                <p class="subtitle">Click and drag to scratch and reveal your prize!</p>
+                <div class="voucher-container">
+                    
+                    <div class="voucher">
+                        <div class="voucher-main">
+                            <div class="voucher-content"><h3>Virtual Roast Session</h3><p>This coupon entitles you to one hilarious roast over video call, where we lovingly roast you until you regret redeeming it.</p></div>
+                            <canvas class="scratch-canvas"></canvas>
+                            <a href="#" class="use-voucher-btn hidden" target="_blank">Use Voucher</a>
+                        </div>
+                        <div class="voucher-aside"><span>WARNING: BRUTAL BUT WITH LOVE ❤️</span></div>
+                    </div>
+                    
+                    <div class="voucher">
+                        <div class="voucher-main">
+                            <div class="voucher-content"><h3>Retail Therapy Rebate 🛍️</h3><p>Good for one online shopping cart checkout (in your dreams, we ain’t that rich). Emotional reimbursement guaranteed.</p></div>
+                            <canvas class="scratch-canvas"></canvas>
+                            <a href="#" class="use-voucher-btn hidden" target="_blank">Use Voucher</a>
+                        </div>
+                        <div class="voucher-aside"><span>EMOTIONAL REIMBURSEMENT</span></div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-main">
+                            <div class="voucher-content"><h3>One Free Treat 🥞</h3><p>Redeemable for one (1) delicious treat of your choice. Ice cream? Pastry? The world is your oyster... or at least the bakery is.</p></div>
+                            <canvas class="scratch-canvas"></canvas>
+                            <a href="#" class="use-voucher-btn hidden" target="_blank">Use Voucher</a>
+                        </div>
+                        <div class="voucher-aside"><span>GOOD FOR ONE USE</span></div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-main">
+                            <div class="voucher-content"><h3>Self-Care Stimulus Package 💅</h3><p>Claim one (1) gift of your choice—clothes, skincare, books, snacks, or even a random one-month subscription. (Please don’t test if we’re secretly billionaires.)</p></div>
+                            <canvas class="scratch-canvas"></canvas>
+                            <a href="#" class="use-voucher-btn hidden" target="_blank">Use Voucher</a>
+                        </div>
+                        <div class="voucher-aside"><span>NO EXPIRY, ONE-TIME USE</span></div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-main">
+                            <div class="voucher-content"><h3>Compliment Coins ✨</h3><p>Good for 10 over-the-top compliments. Redeem when you need an instant ego boost. We're ready when you are.</p></div>
+                             <canvas class="scratch-canvas"></canvas>
+                             <a href="#" class="use-voucher-btn hidden" target="_blank">Use Voucher</a>
+                        </div>
+                        <div class="voucher-aside"><span>INSTANT EGO BOOST</span></div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ by your favorite people.</p>
+        </footer>
+    </div>
+
+    <div id="thoughts-page" class="hidden">
+        <main class="thoughts-page-content">
+            <section class="card">
+                <h1>Our Honest, Unfiltered Thoughts About You...</h1>
+                <div id="thoughts-content-container">
+                    <p class="sweet-thought">You're a genuinely caring person, one who check up on people without being asked.</p>
+                    <p class="sweet-thought">You are honest and real - you never pretend to be someone else.</p>
+                    <p class="sweet-thought">You stand strong in tough situations but also soft-hearted where it matters.</p>
+                     <p class="sweet-thought"> The most irritating, annoying, stubborn person—whom I wouldn’t replace for anyone else.</p>
+                </div>
+                <button id="reveal-honest-thoughts-btn" class="button">Let’s be ✨really✨ honest now</button>
+            </section>
+            <button id="go-back-btn" class="button-secondary">Go Back</button>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+/* ---- GLOBAL STYLES & VARIABLES ---- */
+:root {
+    --primary-color: #FF6B6B; /* A vibrant coral */
+    --secondary-color: #FFD166; /* A cheerful yellow */
+    --accent-color: #06D6A0; /* A lively green */
+    --bg-color: #F7F3E9; /* A soft, warm off-white */
+    --text-color: #4A4A4A;
+    --card-bg: #FFFFFF;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Poppins', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; overflow-x: hidden; }
+
+/* ---- PAGE VISIBILITY ---- */
+.hidden { display: none !important; }
+
+/* ---- LAYOUT & CONTAINERS ---- */
+main { max-width: 900px; margin: 80px auto 2rem; padding: 0 1rem; }
+.text-center { text-align: center; }
+.subtitle { color: #888; margin-top: -0.5rem; margin-bottom: 1.5rem; }
+section.card { background: var(--card-bg); margin-bottom: 2rem; padding: 2rem; border-radius: 12px; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+section.card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); }
+h1, h2, h3 { font-weight: 700; margin-bottom: 1rem; }
+h1 { color: var(--primary-color); font-size: 2.5rem; }
+h2 { color: var(--accent-color); font-size: 1.8rem; border-bottom: 2px solid var(--secondary-color); padding-bottom: 0.5rem; }
+
+/* ---- HEADER & NAVIGATION ---- */
+header { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); position: fixed; width: 100%; top: 0; left: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); }
+nav { display: flex; justify-content: center; gap: 1.5rem; padding: 1rem; }
+nav a { text-decoration: none; color: var(--text-color); font-weight: 600; padding: 0.5rem 1rem; border-radius: 20px; transition: background-color 0.3s ease, color 0.3s ease; }
+nav a:hover { background-color: var(--primary-color); color: white; }
+
+/* ---- BUTTONS ---- */
+.button, .button-secondary { display: inline-block; padding: 0.8rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; margin-top: 1rem; }
+.button { background-color: var(--primary-color); color: white; }
+.button:hover { background-color: #e05252; transform: translateY(-2px); }
+.button-secondary { background-color: #eee; color: var(--text-color); }
+.button-secondary:hover { background-color: #ddd; }
+
+/* ---- QUOTES SECTION ---- */
+#quotes .quote-text { font-size: 1.2rem; font-style: italic; color: #666; text-align: center; min-height: 60px; }
+
+/* ---- MEME FLIP EFFECT ---- */
+.meme-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+.meme-card { perspective: 1000px; height: 250px; cursor: pointer; position: relative; }
+.meme-front, .meme-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); display: flex; justify-content: center; align-items: center; text-align: center; padding: 1rem; border-radius: 8px; }
+.meme-front { background-color: var(--accent-color); color: white; font-weight: 600; transform: rotateY(0deg); }
+.meme-back { background-color: #f0f0f0; transform: rotateY(180deg); }
+.meme-card.is-flipped .meme-front { transform: rotateY(-180deg); }
+.meme-card.is-flipped .meme-back { transform: rotateY(0deg); }
+.meme-placeholder { color: #999; border: 2px dashed #ccc; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; border-radius: 8px; }
+
+/* ---- VOUCHER SCRATCH EFFECT ---- */
+.voucher-container { display: flex; flex-direction: column; gap: 1.5rem; }
+.voucher { display: flex; flex-direction: column; background-color: #fdfaf2; border: 2px dashed var(--secondary-color); border-radius: 10px; overflow: hidden; }
+.voucher-main { padding: 1.5rem; flex-grow: 1; position: relative; text-align: center; } /* Centered text for button */
+.voucher-aside { background-color: var(--secondary-color); color: var(--text-color); display: flex; justify-content: center; align-items: center; font-weight: 700; letter-spacing: 2px; padding: 0.5rem; font-size: 0.8rem; text-transform: uppercase; width: 100%; }
+.scratch-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: grabbing; z-index: 5; transition: opacity 0.8s ease; }
+.use-voucher-btn { display: inline-block; padding: 0.6rem 1.2rem; border-radius: 50px; text-decoration: none; font-weight: 600; background-color: var(--accent-color); color: white; margin-top: 1.5rem; transition: background-color 0.3s, transform 0.3s, opacity 0.5s; opacity: 1; transform: scale(1); }
+.use-voucher-btn.hidden { opacity: 0; pointer-events: none; transform: scale(0.8); }
+.use-voucher-btn:hover { background-color: #05b386; transform: translateY(-2px); }
+
+
+/* ---- HONEST THOUGHTS PAGE ---- */
+#thoughts-page { text-align: center; }
+.thoughts-page-content { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+.sweet-thought.crossed-out { text-decoration: line-through; color: #aaa; transition: all 0.3s ease; }
+.roast-thought { font-weight: 600; color: var(--primary-color); margin-top: 0.5rem; }
+
+/* ---- FOOTER ---- */
+footer { text-align: center; padding: 1rem; color: #888; }
+
+/* ---- ANIMATIONS ---- */
+.balloon { width: 70px; height: 85px; border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; position: fixed; bottom: -100px; opacity: 0.7; z-index: -1; animation: float 15s infinite ease-in-out; }
+.balloon.b1 { background: var(--primary-color); left: 10%; animation-duration: 20s; }
+.balloon.b2 { background: var(--secondary-color); left: 50%; animation-duration: 15s; animation-delay: 2s; }
+.balloon.b3 { background: var(--accent-color); left: 80%; animation-duration: 18s; animation-delay: 5s; }
+@keyframes float { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-120vh) rotate(720deg); } }
+.confetti { position: fixed; width: 10px; height: 10px; top: -20px; z-index: 1000; pointer-events: none; animation: fall 4s linear forwards; }
+@keyframes fall { to { transform: translateY(105vh) rotate(360deg); } }
+
+/* ----  MEME IMAGES ---- */
+.meme-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ---- RESPONSIVE DESIGN ---- */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; } h2 { font-size: 1.5rem; } nav { gap: 0.5rem; } nav a { padding: 0.5rem; }
+}
