@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "https://bit.ly/3K5Urji", // Retail Therapy Rebate
         "https://bit.ly/4pn5LYj", // One Free Treat
         "https://bit.ly/4gqg1ej", // Self-Care Stimulus Package
-        "https://bit.ly/463ZuJI"  // Compliment Coins
+        "https://bit.ly/4mYPaZo"  // Compliment Coins
     ];
 
     document.querySelectorAll('.voucher').forEach((voucher, index) => {
